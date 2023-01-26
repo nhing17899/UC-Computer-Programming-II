@@ -99,7 +99,7 @@ public class Person {
     public int getAge(int year) {
         return year - yearOfBirth;
     }
-
+    
     public String toCSVDataRecord() {
         return firstName + ',' + lastName + ',' + id + ',' + title + ',' + yearOfBirth;
     }
