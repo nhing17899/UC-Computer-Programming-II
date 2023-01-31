@@ -103,5 +103,25 @@ public class Person {
     public String toCSVDataRecord() {
         return firstName + ',' + lastName + ',' + id + ',' + title + ',' + yearOfBirth;
     }
+    public String toJSONRecord() {
+        char DQ = '\u0022';
+        return "{" +
+                DQ + "firstName" + DQ + ":" + DQ + firstName + DQ + "," +
+                DQ + "lastName" + DQ + ":" + DQ + lastName + DQ + "," +
+                DQ + "id" + DQ + ":" + DQ + id + DQ + "," +
+                DQ + "title" + DQ + ":" + DQ + title + DQ + "," +
+                DQ + "yearOfBirth" + DQ + ":" + DQ + yearOfBirth + DQ +
+                "}";
+    }
+
+    public String toXMLRecord() {
+        return "<Person>" +
+                "<firstName>" + firstName + "</firstName>" +
+                "<lastName>" + lastName + "</lastName>" +
+                "<id>" + id + "</id>" +
+                "<title>" + title + "</title>" +
+                "<yearOfBirth>" + yearOfBirth + "</yearOfBirth>" +
+                "</Person>";
+    }
 
 }

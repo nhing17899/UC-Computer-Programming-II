@@ -55,4 +55,30 @@ public class PersonTest {
     public void toCSVDataRecord() {
         assertEquals("Nhi,Nguyen,000002,Stu,1999", p.toCSVDataRecord());
     }
+    @Test
+    public void toJSONRecord() {
+        char DQ = '\u0022';
+        assertEquals(
+                "{" +
+                    DQ + "firstName" + DQ + ":" + DQ + "Nhi" + DQ + "," +
+                    DQ + "lastName" + DQ + ":" + DQ + "Nguyen" + DQ + "," +
+                    DQ + "id" + DQ + ":" + DQ + "000002" + DQ + "," +
+                    DQ + "title" + DQ + ":" + DQ + "Stu" + DQ + "," +
+                    DQ + "yearOfBirth" + DQ + ":" + DQ + "1999" + DQ +
+                "}",
+                p.toJSONRecord());
+    }
+
+    @Test
+    public void toXMLRecord() {
+        assertEquals(
+                "<Person>" +
+                        "<firstName>Nhi</firstName>" +
+                        "<lastName>Nguyen</lastName>" +
+                        "<id>000002</id>" +
+                        "<title>Stu</title>" +
+                        "<yearOfBirth>1999</yearOfBirth>" +
+                        "</Person>",
+                p.toXMLRecord());
+    }
 }

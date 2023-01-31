@@ -59,4 +59,22 @@ public class Product {
         return name + ',' + description + ',' + id + ',' + cost;
     }
 
+    public String toJSONRecord() {
+        char DQ = '\u0022';
+        return "{" +
+                DQ + "name" + DQ + ":" + DQ + name + DQ + "," +
+                DQ + "description" + DQ + ":" + DQ + description + DQ + "," +
+                DQ + "id" + DQ + ":" + DQ + id + DQ + "," +
+                DQ + "cost" + DQ + ":" + DQ + cost + DQ + "," +
+                "}";
+    }
+
+    public String toXMLRecord() {
+        return "<Product>" +
+                "<name>" + name + "</name>" +
+                "<description>" + description + "</description>" +
+                "<id>" + id + "</id>" +
+                "<cost>" + cost + "</cost>" +
+                "</Product>";
+    }
 }
