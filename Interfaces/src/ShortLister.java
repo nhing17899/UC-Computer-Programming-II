@@ -1,20 +1,24 @@
-
-
 import javax.swing.*;
 import java.io.*;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-
 import static java.nio.file.StandardOpenOption.CREATE;
 
-public class ProductReader {
+public class ShortLister {
+    public static void collectAll(ArrayList<String> shortWordList) {
+        for (String word : shortWordList) {
+            System.out.println(word);
+        }
+    };
     public static void main(String[] args) {
+        ShortWordFilter filter = new ShortWordFilter();
+        ArrayList<String> shortWordList = new ArrayList<>();
+
         JFileChooser chooser = new JFileChooser();
         File selectedFile;
         String rec = "";
-
-        ArrayList<Product> productArr = new ArrayList<>();
 
         try
         {
@@ -32,24 +36,18 @@ public class ProductReader {
                 BufferedReader reader =
                         new BufferedReader(new InputStreamReader(in));
 
-                int line = 0;
                 while(reader.ready())
                 {
                     rec = reader.readLine();
-                    String[] splitted = rec.split(",");
+                    String[] splitted = rec.split(" ");
 
-                    String name = splitted[0];
-                    String description = splitted[1];
-                    String id = splitted[2];
-                    double cost = Double.parseDouble(splitted[3]);
-
-                    line++;
-
-                    Product p = new Product(name, description, id, cost);
-                    productArr.add(p);
+                    for (String word : splitted) {
+                        if (filter.accept(word)) shortWordList.add(word);
+                    }
                 }
                 reader.close();
-                System.out.println("\n\nData file read!");
+
+                collectAll(shortWordList);
             }
         }
         catch (FileNotFoundException e)
@@ -62,10 +60,5 @@ public class ProductReader {
             e.printStackTrace();
         }
 
-        System.out.printf("\n%-6s %-12s %-15s %-12s", "ID", "Name", "Description", "Cost");
-
-        for (Product p : productArr) {
-            System.out.printf("\n%-s %-12s %-15s %-12.2f", p.getId(), p.getName(), p.getDescription(), p.getCost());
-        }
     }
 }

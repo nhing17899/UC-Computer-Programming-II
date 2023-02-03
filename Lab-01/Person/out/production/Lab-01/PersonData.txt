@@ -1,2 +1,0 @@
-nhi,nguyen,000001,stu,1999
-tom,wulf,000002,prof,1960
