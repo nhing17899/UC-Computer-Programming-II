@@ -1,0 +1,43 @@
+This is a test file with 50 lines.
+It is being used to test the DataStreamsGUI program.
+The file contains some random sentences and words.
+Each line is different from the other.
+The lines have varying lengths.
+Some lines are short, others are long.
+There are lines that contain numbers and symbols.
+The lines also have different capitalization.
+Some lines have ALL CAPS, others are all lowercase.
+The file has no blank lines.
+It is continuous text.
+This line has a word with a single quote: don't.
+Another line has a word with a hyphen: long-term.
+This line has a word with a double quote: "hello".
+The file contains no special characters or accents.
+This line has an exclamation mark!
+This line has a question mark?
+This line has a period.
+There are no colons or semicolons.
+The file is in English.
+All sentences are grammatically correct.
+This line contains a palindrome: A man, a plan, a canal, Panama!
+This line does not contain a palindrome.
+There are no repeated lines in the file.
+All lines have at least one space.
+The file does not contain any URLs or email addresses.
+There are no HTML tags in the file.
+This line has words that are bold and underlined.
+The program should not recognize these formatting styles.
+The file is being loaded into the program.
+The program should display all lines in the original text area.
+The search function should work correctly.
+Searching for a word should display all lines that contain that word.
+The search function is case-insensitive.
+Searching for a word in all uppercase should display matching lines.
+Searching for a word in all lowercase should display matching lines.
+Searching for a word with mixed capitalization should display matching lines.
+Searching for a word with symbols or special characters should work correctly.
+The program should handle long files.
+This file is not particularly long, but still serves as a good test case.
+The file is being saved and closed.
+The program should close without errors.
+This is the last line of the test file.

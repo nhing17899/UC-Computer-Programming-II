@@ -1,0 +1,3 @@
+A day has 24 hours.
+An hour has 60 minutes.
+A minute has 60 seconds.
