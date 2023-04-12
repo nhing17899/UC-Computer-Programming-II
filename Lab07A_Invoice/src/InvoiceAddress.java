@@ -48,8 +48,6 @@ public class InvoiceAddress
         this.state = state;
     }
 
-
-
     public String getZip()
     {
         return zip;

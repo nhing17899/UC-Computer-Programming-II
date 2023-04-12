@@ -1,13 +1,8 @@
-public class Main
-{
-    public static void main(String[] args)
-    {
-        Invoice invoice;
+import javax.swing.JFrame;
 
-        invoice = new Invoice();
-        invoice.getAddressData();
-        invoice.getInvoiceData();
-        invoice.displayInvoice();
-
+public class Main {
+    public static void main(String[] args) {
+        // create an instance of the InvoiceForm class
+        InvoiceForm invoiceForm = new InvoiceForm();
     }
 }
