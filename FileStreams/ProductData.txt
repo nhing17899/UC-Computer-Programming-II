@@ -1,0 +1,6 @@
+000001, Chuck Beef                         , Beef chuck, a big primal cut, is a mix of tender and less tender meat.     , 20.03
+000013, Tenderloin                         , A beef tenderloin, known as an eye fillet in Australasia                   , 19.93
+000120, Tenderloin Beef                    , Tenderloin Beef                                                            , 19.02
+001230, Chuck Beef                         , Chuck Beef                                                                 , 20.15
+001239, Tender Chicken                     , Tender Chicken                                                             , 8.06
+000102, chuck                              , beef                                                                       , 10.02
